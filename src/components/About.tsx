@@ -26,15 +26,15 @@ const About = () => {
 
             <div className="grid grid-cols-2 gap-8 mb-8">
               <div>
-                <div className="text-3xl font-bold text-purple-600 mb-2">11+</div>
+                <div className="text-3xl font-bold text-purple-600 mb-2">100+</div>
                 <div className="text-gray-600">Cricket Focus</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-purple-600 mb-2">300+</div>
+                <div className="text-3xl font-bold text-purple-600 mb-2">1000+</div>
                 <div className="text-gray-600">Cricket Teams</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-purple-600 mb-2">100+</div>
+                <div className="text-3xl font-bold text-purple-600 mb-2">1000+</div>
                 <div className="text-gray-600">States Served</div>
               </div>
               <div>

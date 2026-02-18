@@ -7,7 +7,7 @@ const ShopByCategory = () => {
         {
             id: 1,
             title: 'TEAM JERSEY',
-            image: '/1.png',
+            image: '/RCB.png',
         },
         {
             id: 2,
@@ -16,29 +16,14 @@ const ShopByCategory = () => {
         },
         {
             id: 3,
-            title: 'EMBROIDERY JERSEY',
+            title: 'PREMIUM JERSEY',
             image: '/3.jpg',
-        },
-        {
-            id: 6,
-            title: 'KIDS',
-            image: '/6.jpg',
         },
         {
             id: 7,
             title: 'OFFER JERSEY',
             image: '/1.png',
         },
-        {
-            id: 8,
-            title: 'PLAYER VERSION',
-            image: '/2.png',
-        },
-        {
-            id: 10,
-            title: 'RETRO JERSEY',
-            image: '/4.jpg',
-        }
     ];
 
     return (

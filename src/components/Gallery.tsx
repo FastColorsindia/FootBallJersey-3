@@ -1,115 +1,84 @@
 import { useState } from 'react';
-import { X, ArrowRight } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { X } from 'lucide-react';
 
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState<number | null>(null);
-  const navigate = useNavigate();
+  const [selectedImage, setSelectedImage] = useState<{ image: string; title: string } | null>(null);
 
   const galleryItems = [
-    {
-      id: 1,
-      title: 'Custom T-Shirt Design',
-      image: '/1.png',
-      alt: 'Custom T-Shirt Design'
-    },
-    {
-      id: 2,
-      title: 'Hoodie Print Sample',
-      image: '/2.png',
-      alt: 'Hoodie Print Sample'
-    },
-    {
-      id: 3,
-      title: 'Direct to Film Print',
-      image: '/3.jpg',
-      alt: 'Direct to Film Print'
-    },
-    {
-      id: 4,
-      title: 'Fashion Apparel',
-      image: '/4.jpg',
-      alt: 'Fashion Apparel'
-    },
-    {
-      id: 5,
-      title: 'Custom Design Work',
-      image: '/5.png',
-      alt: 'Custom Design Work'
-    },
-    {
-      id: 6,
-      title: 'Print Quality Sample',
-      image: '/6.jpg',
-      alt: 'Print Quality Sample'
-    }
+    { id: 1, title: 'Custom T-Shirt Design', image: '/Gallery/CSK.webp' },
+    { id: 2, title: 'Hoodie Print Sample', image: '/Gallery/DC.webp' },
+    { id: 3, title: 'Direct to Film Print', image: '/Gallery/RCB.webp' },
+    { id: 4, title: 'Fashion Apparel', image: '/Gallery/RR.webp' },
+    { id: 5, title: 'Custom Design Work', image: '/Gallery/JS1.jpg' },
+    { id: 6, title: 'Print Quality Sample', image: '/Gallery/JS3.jpg' },
   ];
 
-  return (
-    <section id="gallery" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-navy-dark mb-4">
-            Our Gallery
-          </h2>
-          <p className="text-xl text-gray-500 max-w-2xl mx-auto">
-            Explore our collection of stunning fashion prints and custom designs
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {galleryItems.map((item, index) => (
-            <div
-              key={item.id}
-              onClick={() => setSelectedImage(index)}
-              className="group cursor-pointer relative overflow-hidden rounded-2xl h-64 shadow-lg hover:shadow-xl transition-shadow duration-300"
-            >
-              <img
-                src={item.image}
-                alt={item.alt}
-                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
-              />
-              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-              <div className="absolute bottom-4 left-4 right-4">
-                <h3 className="text-white text-lg font-bold tracking-wide">
-                  {item.title}
-                </h3>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="flex justify-center">
-          <button
-            onClick={() => navigate('/gallery')}
-            className="inline-flex items-center px-8 py-3 bg-[#EE4444] text-white rounded-full font-semibold hover:bg-[#DD3333] transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+  const GridSection = ({ items }: { items: any[] }) => (
+    <div className="mb-12">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          Our Gallery
+        </h2>
+        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          Explore our collection of stunning fashion prints and custom designs
+        </p>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {items.map((item) => (
+          <div
+            key={item.id}
+            onClick={() => setSelectedImage({ image: item.image, title: item.title })}
+            className="group cursor-pointer relative aspect-[4/3] overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500"
           >
-            View More
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </button>
-        </div>
+            <img
+              src={item.image}
+              alt={item.title}
+              className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
+            />
+            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end p-6 opacity-80 group-hover:opacity-100 transition-opacity">
+              <p className="text-white text-lg font-medium tracking-wide">{item.title}</p>
+            </div>
+            <div className="absolute inset-0 border-2 border-transparent group-hover:border-white/20 rounded-2xl transition-colors duration-500"></div>
+          </div>
+        ))}
+      </div>
+      <div className="flex justify-center mt-12">
+        <a
+          href="/gallery"
+          className="inline-flex items-center px-8 py-3 bg-red-500 hover:bg-red-600 text-white rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-red-200"
+        >
+          View More <span className="ml-2">→</span>
+        </a>
+      </div>
+    </div>
+  );
+
+  return (
+    <section id="gallery" className="py-24 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <GridSection items={galleryItems} />
       </div>
 
-      {selectedImage !== null && (
+      {selectedImage && (
         <div
-          className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 backdrop-blur-sm"
+          className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 backdrop-blur-md"
           onClick={() => setSelectedImage(null)}
         >
-          <div className="relative max-w-5xl w-full">
+          <div className="relative max-w-4xl w-full">
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors bg-white/10 p-2 rounded-full hover:bg-white/20"
+              className="absolute -top-12 right-0 text-white hover:text-red-500 transition-colors p-2"
             >
-              <X size={24} />
+              <X size={32} />
             </button>
             <img
-              src={galleryItems[selectedImage].image}
-              alt={galleryItems[selectedImage].alt}
-              className="w-full h-auto max-h-[85vh] object-contain rounded-lg shadow-2xl"
+              src={selectedImage.image}
+              alt={selectedImage.title}
+              className="w-full h-auto max-h-[80vh] object-contain rounded-lg shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             />
-            <p className="text-white text-center mt-4 text-xl font-medium tracking-wide">
-              {galleryItems[selectedImage].title}
+            <p className="text-white text-center mt-6 text-2xl font-bold uppercase tracking-widest">
+              {selectedImage.title}
             </p>
           </div>
         </div>

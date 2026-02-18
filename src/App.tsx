@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import WhatsAppIcon from './components/WhatsAppIcon';
 import Home from './pages/Home';
 import GalleryPage from './pages/GalleryPage';
+import BlogPage from './pages/BlogPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           </>
         } />
         <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/blog/:id" element={<BlogPage />} />
       </Routes>
     </div>
   );

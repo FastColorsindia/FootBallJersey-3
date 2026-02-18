@@ -29,23 +29,28 @@ const Hero = () => {
 
         {/* Background Video Layer */}
         <div className="absolute inset-0 z-0 bg-gray-900">
-          <div className="absolute inset-0 z-10 bg-black/20"></div> {/* Optional overlay for contrast */}
+          <div className="absolute inset-0 z-10 bg-black/10"></div>
           <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
-            <iframe
-              className="absolute top-1/2 left-1/2 w-[177.77vh] h-[56.25vw] min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover"
-              src="https://www.youtube.com/embed/CO8iWd1IiQ0?autoplay=1&mute=1&controls=0&loop=1&playlist=CO8iWd1IiQ0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&iv_load_policy=3"
-              title="Background Video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            ></iframe>
+            <video
+              className="absolute inset-0 w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster="/500X1500.png"
+            >
+              <source src="/MA.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
 
         {/* Mobile Gradient Overlay (Bottom Up) */}
-        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-orange-600/90 to-transparent z-10 md:hidden"></div>
+        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-blue-900/95 to-transparent z-10 md:hidden"></div>
 
-        {/* Desktop Angled Pink Gradient Overlay - Left Side */}
+        {/* Desktop Angled Blue Gradient Overlay - Left Side */}
         <div
-          className="hidden md:block absolute inset-y-0 left-0 w-[60%] lg:w-[55%] bg-gradient-to-r from-orange-500 to-pink-600 z-10 shadow-2xl"
+          className="hidden md:block absolute inset-y-0 left-0 w-[60%] lg:w-[55%] bg-gradient-to-r from-blue-900/95 via-blue-900/90 to-blue-800/80 z-10 shadow-2xl"
           style={{ clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0% 100%)' }}
         ></div>
 
@@ -62,9 +67,9 @@ const Hero = () => {
               href="https://wa.me/917812865788?text=Hi%2C%20I'm%20interested%20in%20your%20industrial-grade%20sublimation%20systems."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-white/20 hover:bg-white/30 border border-white/50 backdrop-blur-sm text-white text-lg font-semibold py-3 md:py-4 px-8 md:px-10 rounded transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
+              className="inline-block bg-white hover:bg-gray-100 text-blue-900 text-lg font-semibold py-3 md:py-4 px-8 md:px-10 rounded-md transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
             >
-              Shop Now
+              CONTECT&US
             </a>
           </div>
         </div>
