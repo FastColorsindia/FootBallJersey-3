@@ -179,7 +179,7 @@ const Hero = () => {
               <div className="flex items-center gap-4 border-b md:border-b-0 md:border-r border-blue-800 pb-4 md:pb-0 last:border-0">
                 <Truck size={40} className="text-white flex-shrink-0" strokeWidth={1.5} />
                 <div>
-                  <h3 className="font-bold text-lg uppercase">Fast Delivery</h3>
+                  <h3 className="font-bold text-lg uppercase">Free Delivery</h3>
                   <p className="text-blue-200 text-xs uppercase tracking-wide">All over India above Rs.999</p>
                 </div>
               </div>

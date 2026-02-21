@@ -9,7 +9,7 @@ const Blog = () => {
       date: 'Feb 1, 2026',
       excerpt: 'Essential tips for designing professional and eye-catching cricket jerseys for your team.',
       image: 'https://images.pexels.com/photos/1367192/pexels-photo-1367192.jpeg?auto=compress&cs=tinysrgb&w=800'
-    },
+    },  
     {
       id: 'choose-perfect-cricket-jersey-colors',
       title: 'How to Choose Perfect Cricket Jersey Colors',

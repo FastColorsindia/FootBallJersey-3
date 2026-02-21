@@ -10,6 +10,7 @@ import Infrastructure from '../components/Infrastructure';
 import Blog from '../components/Blog';
 import About from '../components/About';
 import ClubCollections from '../components/ClubCollections';
+import EnquirySection from '../components/EnquirySection';
 
 const Home = () => {
   return (
@@ -44,33 +45,8 @@ const Home = () => {
       </section>
 
       {/* Enquiry Section */}
-      <section id="enquiry" className="py-12">
-        <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-2xl font-semibold mb-4">Enquiry</h2>
-          <p className="text-gray-700 mb-6">Send us an enquiry and we'll get back to you shortly.</p>
+      <EnquirySection />
 
-          <form className="space-y-4" action="mailto:info@example.com" method="post" encType="text/plain">
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Name</label>
-              <input type="text" name="name" className="mt-1 block w-full border rounded-md p-2" />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Email</label>
-              <input type="email" name="email" className="mt-1 block w-full border rounded-md p-2" />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Message</label>
-              <textarea name="message" rows={4} className="mt-1 block w-full border rounded-md p-2" />
-            </div>
-
-            <div>
-              <button type="submit" className="px-4 py-2 bg-blue-600 text-white rounded">Send Enquiry</button>
-            </div>
-          </form>
-        </div>
-      </section>
 
       {/* Location Section */}
       <section id="location" className="py-12 bg-gray-50">
