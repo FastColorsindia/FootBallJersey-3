@@ -30,11 +30,11 @@ const About = () => {
                 <div className="text-gray-600">Cricket Focus</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-purple-600 mb-2">1000+</div>
+                <div className="text-3xl font-bold text-purple-600 mb-2">80+</div>
                 <div className="text-gray-600">Cricket Teams</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-purple-600 mb-2">1000+</div>
+                <div className="text-3xl font-bold text-purple-600 mb-2">20+</div>
                 <div className="text-gray-600">States Served</div>
               </div>
               <div>

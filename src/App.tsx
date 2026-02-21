@@ -5,6 +5,7 @@ import WhatsAppIcon from './components/WhatsAppIcon';
 import Home from './pages/Home';
 import GalleryPage from './pages/GalleryPage';
 import BlogPage from './pages/BlogPage';
+import BlogListPage from './pages/BlogListPage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           </>
         } />
         <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/blog" element={<BlogListPage />} />
         <Route path="/blog/:id" element={<BlogPage />} />
       </Routes>
     </div>

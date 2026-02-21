@@ -66,7 +66,7 @@ const Infrastructure = () => {
               </h3>
               <ul className="space-y-4">
                 {[
-                  '5000+ units per month',
+                  '5000+ units per Day',
                   'Quick turnaround times',
                   'Custom order flexibility',
                   'Quality tested every item',

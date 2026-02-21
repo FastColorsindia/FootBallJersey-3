@@ -27,6 +27,12 @@ const Navigation = () => {
       return;
     }
 
+    // Special handling for Blog to navigate to the separate blog list page
+    if (sectionId === 'Blog') {
+      navigate('/blog');
+      return;
+    }
+
     // Special handling for Home to navigate to top
     if (sectionId === 'Home') {
       if (location.pathname !== '/') {
@@ -81,15 +87,17 @@ const Navigation = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className={`font-medium transition-colors duration-300 relative group ${(location.pathname === '/gallery' && item === 'Gallery') || (location.pathname === '/' && item === 'Home' && !isScrolled) // Simple highlighting logic
-                    ? 'text-[#BD22B8]'
-                    : 'text-black hover:text-gray-600'
+                className={`font-medium transition-colors duration-300 relative group ${(location.pathname === '/gallery' && item === 'Gallery') ||
+                  (location.pathname.startsWith('/blog') && item === 'Blog') ||
+                  (location.pathname === '/' && item === 'Home' && !isScrolled)
+                  ? 'text-[#BD22B8]'
+                  : 'text-black hover:text-gray-600'
                   }`}
               >
                 {item}
                 <span className={`absolute bottom-0 left-0 h-0.5 bg-[#BD22B8] transition-all duration-300 ${(location.pathname === '/gallery' && item === 'Gallery')
-                    ? 'w-full'
-                    : 'w-0 group-hover:w-full'
+                  ? 'w-full'
+                  : 'w-0 group-hover:w-full'
                   }`}></span>
               </button>
             ))}

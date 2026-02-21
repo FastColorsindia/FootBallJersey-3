@@ -1,4 +1,4 @@
-import { Calendar } from 'lucide-react';
+import { Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Blog = () => {
@@ -74,6 +74,16 @@ const Blog = () => {
               </Link>
             </div>
           ))}
+        </div>
+
+        {/* View All Button */}
+        <div className="text-center mt-10">
+          <Link
+            to="/blog"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-blue-700 text-white font-semibold rounded-full hover:bg-blue-800 transition-colors shadow-md hover:shadow-lg"
+          >
+            View All Articles <ArrowRight size={18} />
+          </Link>
         </div>
       </div>
     </section>

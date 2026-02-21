@@ -1,19 +1,18 @@
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
-  const quickLinks = ['Home', 'Services', 'Gallery', 'Infrastructure', 'Blog', 'About', 'Pricing'];
-  const services = ['Jersey Sublimation', 'T-Shirt Printing', 'Custom Sportswear', 'Bulk Team Orders'];
+  const quickLinks = ['Home', 'Gallery', 'Infrastructure', 'Blog', 'About',];
   const socialLinks = [
     { icon: Facebook, href: '#' },
     { icon: Twitter, href: '#' },
-    { icon: Instagram, href: '#' },
+    { icon: Instagram, href: 'https://www.instagram.com/fastcolorsretail/' },
     { icon: Linkedin, href: '#' }
   ];
 
   return (
     <footer className="bg-navy-dark text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           <div>
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-10 h-10 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg flex items-center justify-center">
@@ -56,21 +55,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
-            <h3 className="text-white font-bold text-lg mb-6">Services</h3>
-            <ul className="space-y-3">
-              {services.map((service, index) => (
-                <li key={index}>
-                  <a
-                    href="#services"
-                    className="hover:text-blue-400 transition-colors duration-300"
-                  >
-                    {service}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+
 
           <div>
             <h3 className="text-white font-bold text-lg mb-6">Contact</h3>
@@ -98,7 +83,7 @@ const Footer = () => {
         <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              &copy; 2024 Fastcolor. All rights reserved.
+              &copy; 2026 Fastcolor. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <a href="#" className="hover:text-purple-400 transition-colors">Privacy Policy</a>

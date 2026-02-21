@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import { Calendar, ArrowLeft, Share2, MessageCircle } from 'lucide-react';
+import { Calendar, ArrowLeft, ArrowRight, Share2, MessageCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import WhatsAppIcon from '../components/WhatsAppIcon';
@@ -11,13 +11,13 @@ const articles = [
         date: 'Feb 1, 2026',
         image: 'https://images.pexels.com/photos/1367192/pexels-photo-1367192.jpeg?auto=compress&cs=tinysrgb&w=800',
         content: `
-      Designing a cricket jersey is about more than just looks – it's about team identity, comfort, and professional appearance. Here are some essential tips for creating the perfect design:
+Designing a cricket jersey is about more than just looks – it's about team identity, comfort, and professional appearance. Here are some essential tips for creating the perfect design:
 
-      1. **Choose the Right Fabric**: Performance is key. Look for moisture-wicking materials that keep players cool during intense matches.
-      2. **Color Psychology**: Choose colors that represent your team's spirit. Bright colors like orange and yellow signify energy, while blues and greens are often seen as more professional and calm.
-      3. **Logo Placement**: Ensure your team logo is prominently displayed on the chest. Sponsor logos should be clearly visible but not overshadow the team identity.
-      4. **Modern Patterns**: Sublimation printing allows for complex gradients and patterns. Don't be afraid to experiment with geometric designs or subtle textures.
-      5. **Typography**: Use bold, readable fonts for player names and numbers. Visibility from a distance is crucial.
+1. **Choose the Right Fabric**: Performance is key. Look for moisture-wicking materials that keep players cool during intense matches.
+2. **Color Psychology**: Choose colors that represent your team's spirit. Bright colors like orange and yellow signify energy, while blues and greens are often seen as more professional and calm.
+3. **Logo Placement**: Ensure your team logo is prominently displayed on the chest. Sponsor logos should be clearly visible but not overshadow the team identity.
+4. **Modern Patterns**: Sublimation printing allows for complex gradients and patterns. Don't be afraid to experiment with geometric designs or subtle textures.
+5. **Typography**: Use bold, readable fonts for player names and numbers. Visibility from a distance is crucial.
     `,
         author: 'Design Team',
         readTime: '5 min read'
@@ -28,12 +28,12 @@ const articles = [
         date: 'Jan 28, 2026',
         image: 'https://images.pexels.com/photos/3803517/pexels-photo-3803517.jpeg?auto=compress&cs=tinysrgb&w=800',
         content: `
-      Color selection is one of the most important aspects of your team's branding. Your jersey colors will define how your team is perceived on and off the field.
+Color selection is one of the most important aspects of your team's branding. Your jersey colors will define how your team is perceived on and off the field.
 
-      - **Primary Colors**: This should be your main brand color. It usually covers about 60-70% of the jersey.
-      - **Secondary Colors**: Used for accents, sleeves, and side panels. These should complement your primary color.
-      - **Contrast**: Ensure high contrast between the base color and the text (names/numbers).
-      - **Tournament Rules**: Always check if there are specific color restrictions in the tournaments you play.
+- **Primary Colors**: This should be your main brand color. It usually covers about 60-70% of the jersey.
+- **Secondary Colors**: Used for accents, sleeves, and side panels. These should complement your primary color.
+- **Contrast**: Ensure high contrast between the base color and the text (names/numbers).
+- **Tournament Rules**: Always check if there are specific color restrictions in the tournaments you play.
     `,
         author: 'Color Expert',
         readTime: '4 min read'
@@ -44,12 +44,12 @@ const articles = [
         date: 'Jan 20, 2026',
         image: 'https://images.pexels.com/photos/4239031/pexels-photo-4239031.jpeg?auto=compress&cs=tinysrgb&w=800',
         content: `
-      Premium cricket jerseys are an investment. Proper care ensures they last many seasons and continue to look vibrant.
+Premium cricket jerseys are an investment. Proper care ensures they last many seasons and continue to look vibrant.
 
-      1. **Washing**: Always wash inside out in cold water. Avoid harsh detergents or bleach.
-      2. **Drying**: Air dry only. High heat from dryers can damage the sublimation fibers and cause logos to peel if they are heat-pressed.
-      3. **Storage**: Fold neatly or hang in a cool, dry place. Avoid direct sunlight for long periods as it can fade even high-quality prints over years.
-      4. **Stain Removal**: Treat grass or dirt stains immediately with mild stain removers before washing.
+1. **Washing**: Always wash inside out in cold water. Avoid harsh detergents or bleach.
+2. **Drying**: Air dry only. High heat from dryers can damage the sublimation fibers and cause logos to peel if they are heat-pressed.
+3. **Storage**: Fold neatly or hang in a cool, dry place. Avoid direct sunlight for long periods as it can fade even high-quality prints over years.
+4. **Stain Removal**: Treat grass or dirt stains immediately with mild stain removers before washing.
     `,
         author: 'Maintenance Pro',
         readTime: '3 min read'
@@ -58,14 +58,18 @@ const articles = [
 
 const BlogPage = () => {
     const { id } = useParams();
-    const article = articles.find(a => a.id === id);
+    const currentIndex = articles.findIndex(a => a.id === id);
+    const article = articles[currentIndex];
+
+    const prevArticle = currentIndex > 0 ? articles[currentIndex - 1] : null;
+    const nextArticle = currentIndex < articles.length - 1 ? articles[currentIndex + 1] : null;
 
     if (!article) {
         return (
             <div className="min-h-screen flex items-center justify-center">
                 <div className="text-center">
                     <h1 className="text-4xl font-bold mb-4">Article Not Found</h1>
-                    <Link to="/" className="text-blue-600 hover:underline">Back to Home</Link>
+                    <Link to="/blog" className="text-blue-600 hover:underline">Back to Blog</Link>
                 </div>
             </div>
         );
@@ -77,12 +81,21 @@ const BlogPage = () => {
 
             <main className="pt-32 pb-20">
                 <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    {/* Breadcrumb */}
+                    <div className="flex items-center gap-2 text-sm text-gray-500 mb-6">
+                        <Link to="/" className="hover:text-blue-600 transition-colors">Home</Link>
+                        <span>/</span>
+                        <Link to="/blog" className="hover:text-blue-600 transition-colors">Blog</Link>
+                        <span>/</span>
+                        <span className="text-gray-700 line-clamp-1">{article.title}</span>
+                    </div>
+
                     <Link
-                        to="/"
+                        to="/blog"
                         className="inline-flex items-center gap-2 text-gray-600 hover:text-blue-600 mb-8 transition-colors group"
                     >
                         <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
-                        Back to Home
+                        Back to Blog
                     </Link>
 
                     <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
@@ -133,13 +146,53 @@ const BlogPage = () => {
 
                                 <div className="flex gap-2">
                                     <span className="text-sm text-gray-400 italic">Interested in custom designs?</span>
-                                    <a href="https://wa.me/919489500000" className="text-sm font-bold text-green-600 hover:text-green-700">Contact Us on WhatsApp</a>
+                                    <a
+                                        href="https://wa.me/917812865788?text=Hi%2C%20I'm%20interested%20in%20custom%20jersey%20designs."
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-sm font-bold text-green-600 hover:text-green-700"
+                                    >
+                                        Contact Us on WhatsApp
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Related Articles Suggestion (Simplified) */}
+                    {/* Prev / Next Article Navigation */}
+                    <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {prevArticle ? (
+                            <Link
+                                to={`/blog/${prevArticle.id}`}
+                                className="flex items-center gap-4 p-5 bg-white border border-gray-200 rounded-xl hover:shadow-md hover:border-blue-300 transition-all group"
+                            >
+                                <div className="p-2 bg-blue-50 rounded-lg text-blue-600 group-hover:bg-blue-100 transition-colors flex-shrink-0">
+                                    <ChevronLeft size={22} />
+                                </div>
+                                <div className="overflow-hidden">
+                                    <p className="text-xs text-gray-400 uppercase font-semibold tracking-wider mb-1">Previous Article</p>
+                                    <p className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors line-clamp-1">{prevArticle.title}</p>
+                                </div>
+                            </Link>
+                        ) : <div />}
+
+                        {nextArticle ? (
+                            <Link
+                                to={`/blog/${nextArticle.id}`}
+                                className="flex items-center gap-4 p-5 bg-white border border-gray-200 rounded-xl hover:shadow-md hover:border-blue-300 transition-all group md:flex-row-reverse md:text-right"
+                            >
+                                <div className="p-2 bg-blue-50 rounded-lg text-blue-600 group-hover:bg-blue-100 transition-colors flex-shrink-0">
+                                    <ChevronRight size={22} />
+                                </div>
+                                <div className="overflow-hidden">
+                                    <p className="text-xs text-gray-400 uppercase font-semibold tracking-wider mb-1">Next Article</p>
+                                    <p className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors line-clamp-1">{nextArticle.title}</p>
+                                </div>
+                            </Link>
+                        ) : <div />}
+                    </div>
+
+                    {/* Related Articles */}
                     <div className="mt-16">
                         <h2 className="text-2xl font-bold mb-8 text-navy-dark">More from our Blog</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -157,11 +210,22 @@ const BlogPage = () => {
                                             <h3 className="font-bold text-lg text-navy-dark group-hover:text-blue-600 transition-colors line-clamp-1">
                                                 {a.title}
                                             </h3>
-                                            <p className="text-sm text-gray-500 mt-1">{a.date}</p>
+                                            <div className="flex items-center gap-3 mt-2">
+                                                <p className="text-sm text-gray-500">{a.date}</p>
+                                                <span className="text-xs px-2 py-0.5 bg-blue-100 text-blue-700 rounded-full">{a.readTime}</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </Link>
                             ))}
+                        </div>
+                        <div className="text-center mt-8">
+                            <Link
+                                to="/blog"
+                                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition-colors"
+                            >
+                                View All Articles <ArrowRight size={18} />
+                            </Link>
                         </div>
                     </div>
                 </article>

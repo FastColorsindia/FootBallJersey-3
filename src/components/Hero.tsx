@@ -69,7 +69,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="inline-block bg-white hover:bg-gray-100 text-blue-900 text-lg font-semibold py-3 md:py-4 px-8 md:px-10 rounded-md transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
             >
-              CONTECT&US
+              CONTECT US
             </a>
           </div>
         </div>
@@ -115,7 +115,7 @@ const Hero = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
 
                   {/* Content */}
-                  <div className="absolute inset-0 flex flex-col justify-center px-8 md:px-16 max-w-2xl text-white">
+                  <div className="absolute inset-0 flex flex-col justify-center px-12 md:px-16 max-w-2xl text-white">
                     <h2 className="text-xl md:text-5xl font-bold uppercase leading-tight mb-2 md:mb-4">
                       Design Your Team's <br /> Ultimate Jersey Today
                     </h2>
@@ -160,12 +160,12 @@ const Hero = () => {
               </div>
 
               {/* Mobile Navigation Arrows (Inside card) */}
-              <div className="absolute inset-0 flex justify-between items-center px-2 md:hidden pointer-events-none">
+              <div className="absolute inset-0 flex justify-between items-center px-1 md:hidden pointer-events-none">
                 <button onClick={prevSlide} className="p-2 pointer-events-auto text-white/70 hover:text-white">
-                  <ChevronLeft size={30} />
+                  <ChevronLeft size={24} />
                 </button>
                 <button onClick={nextSlide} className="p-2 pointer-events-auto text-white/70 hover:text-white">
-                  <ChevronRight size={30} />
+                  <ChevronRight size={24} />
                 </button>
               </div>
             </div>
@@ -179,8 +179,8 @@ const Hero = () => {
               <div className="flex items-center gap-4 border-b md:border-b-0 md:border-r border-blue-800 pb-4 md:pb-0 last:border-0">
                 <Truck size={40} className="text-white flex-shrink-0" strokeWidth={1.5} />
                 <div>
-                  <h3 className="font-bold text-lg uppercase">Free Delivery</h3>
-                  <p className="text-blue-200 text-xs uppercase tracking-wide">All over India above Rs.399</p>
+                  <h3 className="font-bold text-lg uppercase">Fast Delivery</h3>
+                  <p className="text-blue-200 text-xs uppercase tracking-wide">All over India above Rs.999</p>
                 </div>
               </div>
 
