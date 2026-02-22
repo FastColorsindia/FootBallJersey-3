@@ -8,14 +8,14 @@ const ClubCollections = () => {
     const [canScrollRight, setCanScrollRight] = useState(true);
 
     const clubs = [
-        { name: 'AC MILAN', logo: '/Gallery/FB1.png' },
-        { name: 'BARCELONA', logo: '/Gallery/FB2.png' },
-        { name: 'ARSENAL', logo: '/Gallery/FB3.png' },
-        { name: 'ARGENTINA', logo: '/Gallery/FB4.png' },
-        { name: 'AL NASSR', logo: '/Gallery/FB5.png' },
-        { name: 'AJAX', logo: '/Gallery/FB6.png' },
-        { name: 'AL HILAL', logo: '/Gallery/FB8.png' },
-        { name: 'ALGERIA', logo: '/Gallery/FB9.png' },
+        { name: 'Ajax', logo: '/11.png' },
+        { name: 'Al Hilal SFC', logo: '/12.png' },
+        { name: 'FC BARCELONA', logo: '/13.png' },
+        { name: 'ARSENAL', logo: '/14.png' },
+        { name: 'AL NASSR', logo: '/15.png' },
+        { name: 'ARGENTINA', logo: '/16.png' },
+        { name: 'AL HILAL', logo: '/18.png' },
+        { name: 'ALGERIA', logo: '/11.png' },
     ];
 
     const checkScroll = () => {

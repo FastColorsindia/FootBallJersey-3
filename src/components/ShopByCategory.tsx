@@ -7,22 +7,22 @@ const ShopByCategory = () => {
         {
             id: 1,
             title: 'TEAM JERSEY',
-            image: '/SUBLIMATION%20SERVER/7.jpg',
+            image: '/Gallery1/JS35.webp',
         },
         {
             id: 2,
             title: 'CUSTOMIZED',
-            image: '/SUBLIMATION%20SERVER/8.jpg',
+            image: '/Gallery1/JS36.webp',
         },
         {
             id: 3,
             title: 'PREMIUM JERSEY',
-            image: '/SUBLIMATION%20SERVER/9.jpg',
+            image: '/Gallery1/JS44.webp',
         },
         {
             id: 7,
             title: 'OFFER JERSEY',
-            image: '/SUBLIMATION%20SERVER/10.jpg',
+            image: '/Gallery1/JS45.webp',
         },
     ];
 
