@@ -1,28 +1,27 @@
 
-import React from 'react';
 import { motion } from 'framer-motion';
 
 
 const row1Images = [
-    '/Gallery/FB1.png',
-    '/Gallery/FB2.png', // Replaced broken image
-    '/Gallery/FB3.png',
-    '/Gallery/FB4.png',
-    '/Gallery/FB5.png',
-    '/Gallery/FB6.png',
-    '/Gallery/FB7.png',
-    '/Gallery/FB8.png',
+    '/SUBLIMATION%20SERVER/11.jpg',
+    '/SUBLIMATION%20SERVER/12.jpg',
+    '/SUBLIMATION%20SERVER/13.jpg',
+    '/SUBLIMATION%20SERVER/14.jpg',
+    '/SUBLIMATION%20SERVER/15.jpg',
+    '/SUBLIMATION%20SERVER/16.jpg',
+    '/SUBLIMATION%20SERVER/17.jpg',
+    '/SUBLIMATION%20SERVER/18.jpg',
 ];
 
 const row2Images = [
-    '/Gallery1/JS35.webp',
-    '/Gallery1/JS32.webp',
-    '/Gallery1/JS38.webp',
-    '/Gallery1/JS36.webp',
-    '/Gallery1/JS42.webp',
-    '/Gallery1/JS43.webp',
-    '/Gallery1/JS44.webp',
-    '/Gallery1/JS45.webp',
+    '/SUBLIMATION%20SERVER/19.jpg',
+    '/SUBLIMATION%20SERVER/20.jpg',
+    '/SUBLIMATION%20SERVER/21.jpg',
+    '/SUBLIMATION%20SERVER/22.jpg',
+    '/SUBLIMATION%20SERVER/23.jpg',
+    '/SUBLIMATION%20SERVER/24.jpg',
+    '/SUBLIMATION%20SERVER/25.jpg',
+    '/SUBLIMATION%20SERVER/26.jpg',
 ];
 
 // Duplicate items multiple times to ensure we fill the screen for smooth loop

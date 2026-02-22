@@ -9,68 +9,11 @@ const GalleryPage = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 12;
 
-    const galleryItems = [
-        { id: 1, title: 'Premium Collection 1', image: '/Gallery1/JS3.jpg' },
-        { id: 2, title: 'Premium Collection 2', image: '/Gallery1/JS4.jpg' },
-        { id: 3, title: 'Premium Collection 3', image: '/Gallery1/JS19.jpg' },
-        { id: 4, title: 'Premium Collection 4', image: '/Gallery1/JS22.jpg' },
-        { id: 5, title: 'Premium Collection 5', image: '/Gallery1/JS23.jpg' },
-        { id: 6, title: 'Premium Collection 6', image: '/Gallery1/JS26.jpg' },
-        { id: 7, title: 'Premium Collection 7', image: '/Gallery1/JS30.jpg' },
-        { id: 8, title: 'Premium Collection 8', image: '/Gallery1/JS31.jpg' },
-        { id: 9, title: 'Premium Collection 9', image: '/Gallery1/JS32.webp' },
-        { id: 10, title: 'Premium Collection 10', image: '/Gallery1/JS34.jpg' },
-        { id: 11, title: 'Premium Collection 11', image: '/Gallery1/JS35.webp' },
-        { id: 12, title: 'Premium Collection 12', image: '/Gallery1/JS36.webp' },
-        { id: 13, title: 'Premium Collection 13', image: '/Gallery1/JS38.webp' },
-        { id: 14, title: 'Premium Collection 14', image: '/Gallery1/JS39.webp' },
-        { id: 15, title: 'Premium Collection 15', image: '/Gallery1/JS42.webp' },
-        { id: 16, title: 'Premium Collection 16', image: '/Gallery1/JS43.webp' },
-        { id: 17, title: 'Premium Collection 17', image: '/Gallery1/JS44.webp' },
-        { id: 18, title: 'Premium Collection 18', image: '/Gallery1/JS45.webp' },
-        { id: 19, title: 'Premium Collection 19', image: '/Gallery1/JS51.jpg' },
-        { id: 20, title: 'Premium Collection 20', image: '/Gallery1/JS66.jpg' },
-        { id: 21, title: 'Premium Collection 21', image: '/Gallery1/JS67.jpg' },
-        { id: 22, title: 'Premium Collection 22', image: '/Gallery1/JS68.jpg' },
-        { id: 23, title: 'Premium Collection 23', image: '/Gallery1/JS69.jpg' },
-        { id: 24, title: 'Premium Collection 24', image: '/Gallery1/JS70.jpg' },
-        { id: 25, title: 'Premium Collection 25', image: '/Gallery1/JS71.jpg' },
-        { id: 26, title: 'Premium Collection 26', image: '/Gallery1/JS72.jpg' },
-        { id: 27, title: 'Premium Collection 27', image: '/Gallery1/JS73.jpg' },
-        { id: 28, title: 'Premium Collection 28', image: '/Gallery1/JS74.jpg' },
-        { id: 29, title: 'Premium Collection 29', image: '/Gallery1/JS75.jpg' },
-        { id: 30, title: 'Premium Collection 30', image: '/Gallery1/JS76.jpg' },
-        { id: 31, title: 'Premium Collection 31', image: '/Gallery1/JS77.jpg' },
-        { id: 32, title: 'Premium Collection 32', image: '/Gallery1/JS78.jpg' },
-        { id: 33, title: 'Premium Collection 33', image: '/Gallery1/JS79.jpg' },
-        { id: 34, title: 'Premium Collection 34', image: '/Gallery1/JS80.jpg' },
-        { id: 35, title: 'Premium Collection 35', image: '/Gallery1/JS81.jpg' },
-        { id: 36, title: 'CSK Official Logo', image: '/Gallery1/JS82.jpg' },
-        { id: 37, title: 'Premium Collection 37', image: '/Gallery1/JS83.jpg' },
-        { id: 38, title: 'Premium Collection 38', image: '/Gallery1/JS84.jpg' },
-        { id: 39, title: 'Premium Collection 39', image: '/Gallery1/JS85.jpg' },
-        { id: 40, title: 'Premium Collection 40', image: '/Gallery1/JS86.png' },
-        { id: 41, title: 'Premium Collection 41', image: '/Gallery1/JS87.jpg' },
-        { id: 42, title: 'Premium Collection 42', image: '/Gallery1/JS88.jpg' },
-        { id: 43, title: 'Premium Collection 43', image: '/Gallery1/JS89.jpg' },
-        { id: 44, title: 'Premium Collection 44', image: '/Gallery1/JS90.jpg' },
-        { id: 45, title: 'Premium Collection 45', image: '/Gallery1/JS91.jpg' },
-        { id: 46, title: 'Premium Collection 46', image: '/Gallery1/JS92.jpg' },
-        { id: 47, title: 'Premium Collection 47', image: '/Gallery1/JS93.jpg' },
-        { id: 48, title: 'RCB Official Logo', image: '/Gallery1/JS94.jpg' },
-        { id: 49, title: 'Premium Collection 49', image: '/Gallery1/JS95.jpg' },
-        { id: 50, title: 'Premium Collection 50', image: '/Gallery1/JS96.jpg' },
-        { id: 51, title: 'Premium Collection 51', image: '/Gallery1/JS97.jpg' },
-        { id: 52, title: 'DC Official Logo', image: '/Gallery1/JS98.jpg' },
-        { id: 53, title: 'Premium Collection 53', image: '/Gallery1/JS99.jpg' },
-        { id: 54, title: 'Premium Collection 54', image: '/Gallery1/JS100.jpg' },
-        { id: 55, title: 'Premium Collection 55', image: '/Gallery1/JS101.jpg' },
-        { id: 56, title: 'Premium Collection 56', image: '/Gallery1/JS102.jpg' },
-        { id: 57, title: 'Premium Collection 57', image: '/Gallery1/JS103.jpg' },
-        { id: 58, title: 'Premium Collection 58', image: '/Gallery1/JS340.webp' },
-        { id: 59, title: 'Premium Collection 59', image: '/Gallery1/JS341.webp' },
-        { id: 60, title: 'Main FootBall Collection', image: '/Gallery1/JSMAIN-1.jpg' },
-    ];
+    const galleryItems = Array.from({ length: 40 }, (_, i) => ({
+        id: i + 1,
+        title: `Premium Collection ${i + 1}`,
+        image: `/SUBLIMATION%20SERVER/${i + 1}.jpg`
+    }));
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -141,7 +84,7 @@ const GalleryPage = () => {
                             playsInline
                             poster="/500X1500.png"
                         >
-                            <source src="/FB.mp4" type="video/mp4" />
+                            <source src="/34594-402634196_small.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -151,7 +94,7 @@ const GalleryPage = () => {
                         OUR GALLERY
                     </h1>
                     <p className="text-gray-300 text-lg md:text-xl font-light uppercase tracking-widest">
-                        Premium Sports Collections
+                        Premium Sublimation Print
                     </p>
                 </div>
             </div>
