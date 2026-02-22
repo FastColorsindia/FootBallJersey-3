@@ -5,12 +5,12 @@ const Infrastructure = () => {
     {
       icon: Droplet,
       title: 'Sublimation Printers',
-      description: 'Professional sublimation printers for vibrant, detailed cricket jersey designs.'
+      description: 'Professional sublimation printers for vibrant, detailed FootBall jersey designs.'
     },
     {
       icon: Thermometer,
       title: 'Heat Press Equipment',
-      description: 'Advanced heat presses for perfect sublimation transfer on cricket jerseys.'
+      description: 'Advanced heat presses for perfect sublimation transfer on FootBall jerseys.'
     },
     {
       icon: Zap,

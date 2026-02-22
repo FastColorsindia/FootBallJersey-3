@@ -1,16 +1,13 @@
-
-import React from 'react';
 import { motion } from 'framer-motion';
 
-const CricketJerseyBanner = () => {
+const FootBallJerseyBanner = () => {
     return (
         <section className="relative w-full h-[60vh] md:h-[80vh] bg-black overflow-hidden flex items-end justify-center pb-20">
-            {/* Background Image - Using a cricket/sports theme placeholder since I cannot access the uploaded file directly. 
-          The user can replace this source with their specific image. */}
+            {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <img
                     src="BANNER.png"
-                    alt="Cricket Jerseys"
+                    alt="FootBall Jerseys"
                     className="w-full h-full object-cover opacity-60"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40" />
@@ -23,7 +20,7 @@ const CricketJerseyBanner = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     className="text-4xl md:text-7xl font-bold uppercase italic tracking-tighter text-white mb-2"
-                    style={{ fontFamily: 'Oswald, sans-serif' }} // Assuming Oswald or similar condensed font for sports look
+                    style={{ fontFamily: 'Oswald, sans-serif' }}
                 >
                     FootBall Jerseys <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-red-600">- Own Your Game</span>
                 </motion.h2>
@@ -41,4 +38,4 @@ const CricketJerseyBanner = () => {
     );
 };
 
-export default CricketJerseyBanner;
+export default FootBallJerseyBanner;

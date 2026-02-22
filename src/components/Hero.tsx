@@ -132,7 +132,7 @@ const Hero = () => {
                     </div>
 
                     <p className="text-xs md:text-lg text-gray-200 mb-4 md:mb-8 max-w-lg">
-                      Premium professional cricket jerseys. Perfect for your team's victory and comfort on the field.
+                      Premium professional FootBall jerseys. Perfect for your team's victory and comfort on the field.
                     </p>
 
                     <a

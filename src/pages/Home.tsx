@@ -2,7 +2,7 @@ import Hero from '../components/Hero';
 import DesignIn3D from '../components/DesignIn3D';
 import { ProductShowcase } from '../components/ProductShowcase';
 import WhatWeDo from '../components/WhatWeDo';
-import CricketJerseyBanner from '../components/CricketJerseyBanner';
+import FootBallJerseyBanner from '../components/FootBallJerseyBanner';
 import Services from '../components/Services';
 import Gallery from '../components/Gallery';
 import ShopByCategory from '../components/ShopByCategory';
@@ -28,8 +28,8 @@ const Home = () => {
       {/* What We Do section */}
       <WhatWeDo />
 
-      {/* Cricket Jersey Banner */}
-      <CricketJerseyBanner />
+      {/* FootBall Jersey Banner */}
+      <FootBallJerseyBanner />
 
       <Services />
       <ShopByCategory />

@@ -69,7 +69,7 @@ const GalleryPage = () => {
         { id: 57, title: 'Premium Collection 57', image: '/Gallery1/JS103.jpg' },
         { id: 58, title: 'Premium Collection 58', image: '/Gallery1/JS340.webp' },
         { id: 59, title: 'Premium Collection 59', image: '/Gallery1/JS341.webp' },
-        { id: 60, title: 'Main Cricket Collection', image: '/Gallery1/JSMAIN-1.jpg' },
+        { id: 60, title: 'Main FootBall Collection', image: '/Gallery1/JSMAIN-1.jpg' },
     ];
 
     useEffect(() => {

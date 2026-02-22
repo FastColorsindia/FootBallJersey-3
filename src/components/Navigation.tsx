@@ -84,7 +84,7 @@ const Navigation = () => {
           >
             <img
               src="/500X1500.png"
-              alt="Cricket Jersey Designs Logo"
+              alt="FootBall Jersey Designs Logo"
               className="h-12 w-auto"
             />
           </button>
