@@ -124,7 +124,15 @@ const GalleryPage = () => {
 
     const handlePageChange = (page: number) => {
         setCurrentPage(page);
-        window.scrollTo({ top: 300, behavior: 'smooth' });
+        const gridSection = document.getElementById('gallery-grid');
+        if (gridSection) {
+            const navHeight = 100; // Account for fixed header
+            const elementPosition = gridSection.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+        } else {
+            window.scrollTo({ top: 400, behavior: 'smooth' });
+        }
     };
 
     return (
@@ -159,7 +167,7 @@ const GalleryPage = () => {
                 </div>
             </div>
 
-            <main className="flex-grow py-8 md:py-16 bg-white container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+            <main id="gallery-grid" className="flex-grow py-8 md:py-16 bg-white container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
                 <GridSection title="OUR COLLECTIONS" items={paginatedItems} />
 
                 {/* Pagination UI */}

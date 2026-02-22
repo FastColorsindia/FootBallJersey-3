@@ -47,19 +47,26 @@ const Navigation = () => {
     }
 
     // For other sections
+    const targetId = sectionId.toLowerCase();
     if (location.pathname !== '/') {
       navigate('/');
       // Delay scroll to allow navigation to complete
       setTimeout(() => {
-        const element = document.getElementById(sectionId.toLowerCase());
+        const element = document.getElementById(targetId);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+          const navHeight = 80;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+          window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
         }
       }, 100);
     } else {
-      const element = document.getElementById(sectionId.toLowerCase());
+      const element = document.getElementById(targetId);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        const navHeight = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
       }
     }
   };

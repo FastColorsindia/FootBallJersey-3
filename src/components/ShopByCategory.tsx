@@ -11,7 +11,7 @@ const ShopByCategory = () => {
         },
         {
             id: 2,
-            title: 'CUSHIONS',
+            title: 'CUSTOMIZED',
             image: '/2.png',
         },
         {

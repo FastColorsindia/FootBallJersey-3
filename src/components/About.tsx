@@ -27,11 +27,11 @@ const About = () => {
             <div className="grid grid-cols-2 gap-8 mb-8">
               <div>
                 <div className="text-3xl font-bold text-purple-600 mb-2">100+</div>
-                <div className="text-gray-600">Cricket Focus</div>
+                <div className="text-gray-600">Cricket Designs</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-purple-600 mb-2">80+</div>
-                <div className="text-gray-600">Cricket Teams</div>
+                <div className="text-gray-600">Customized Teams</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-purple-600 mb-2">20+</div>

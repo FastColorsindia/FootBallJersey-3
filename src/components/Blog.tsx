@@ -1,30 +1,34 @@
-import { Calendar, ArrowRight } from 'lucide-react';
+import { useState } from 'react';
+import { Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+import { articles } from '../data/blogs';
+
 const Blog = () => {
-  const articles = [
-    {
-      id: 'cricket-jersey-design-tips',
-      title: 'Cricket Jersey Design Tips for Teams',
-      date: 'Feb 1, 2026',
-      excerpt: 'Essential tips for designing professional and eye-catching cricket jerseys for your team.',
-      image: 'https://images.pexels.com/photos/1367192/pexels-photo-1367192.jpeg?auto=compress&cs=tinysrgb&w=800'
-    },  
-    {
-      id: 'choose-perfect-cricket-jersey-colors',
-      title: 'How to Choose Perfect Cricket Jersey Colors',
-      date: 'Jan 28, 2026',
-      excerpt: 'A guide to selecting colors and designs that represent your cricket team brand.',
-      image: 'https://images.pexels.com/photos/3803517/pexels-photo-3803517.jpeg?auto=compress&cs=tinysrgb&w=800'
-    },
-    {
-      id: 'maintaining-your-cricket-jerseys',
-      title: 'Maintaining Your Cricket Jerseys',
-      date: 'Jan 20, 2026',
-      excerpt: 'Best practices for maintaining and caring for premium cricket jerseys.',
-      image: 'https://images.pexels.com/photos/4239031/pexels-photo-4239031.jpeg?auto=compress&cs=tinysrgb&w=800'
+  const [currentPage, setCurrentPage] = useState(1);
+  const articlesPerPage = 3;
+
+  const totalArticles = articles.length;
+  const totalPages = Math.ceil(totalArticles / articlesPerPage);
+
+  const indexOfLastArticle = currentPage * articlesPerPage;
+  const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
+  const currentArticles = articles.slice(indexOfFirstArticle, indexOfLastArticle);
+
+  const handlePageChange = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+    const blogSection = document.getElementById('blog');
+    if (blogSection) {
+      const navHeight = 80; // height of the fixed navbar
+      const elementPosition = blogSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
-  ];
+  };
 
   return (
     <section id="blog" className="py-24 bg-white">
@@ -39,7 +43,7 @@ const Blog = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {articles.map((article, index) => (
+          {currentArticles.map((article, index) => (
             <div
               key={index}
               className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group"
@@ -76,14 +80,55 @@ const Blog = () => {
           ))}
         </div>
 
-        {/* View All Button */}
-        <div className="text-center mt-10">
-          <Link
-            to="/blog"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-blue-700 text-white font-semibold rounded-full hover:bg-blue-800 transition-colors shadow-md hover:shadow-lg"
-          >
-            View All Articles <ArrowRight size={18} />
-          </Link>
+        {/* Pagination - Matching the design */}
+        <div className="flex flex-col items-center gap-6 mt-16">
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
+              disabled={currentPage === 1}
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all ${currentPage === 1
+                ? 'bg-gray-50 text-gray-300 border-gray-200 cursor-not-allowed'
+                : 'bg-white text-gray-700 border-gray-200 hover:border-navy-dark hover:bg-gray-50'
+                }`}
+            >
+              <ChevronLeft size={18} />
+              <span className="hidden sm:inline">Previous</span>
+            </button>
+
+            <div className="flex gap-2">
+              {[...Array(totalPages)].map((_, index) => {
+                const pageNumber = index + 1;
+                return (
+                  <button
+                    key={pageNumber}
+                    onClick={() => handlePageChange(pageNumber)}
+                    className={`w-10 h-10 flex items-center justify-center rounded-lg border font-bold transition-all ${currentPage === pageNumber
+                      ? 'bg-navy-dark text-white border-navy-dark shadow-md scale-105'
+                      : 'bg-white text-gray-700 border-gray-200 hover:border-navy-dark hover:bg-gray-50'
+                      }`}
+                  >
+                    {pageNumber}
+                  </button>
+                );
+              })}
+            </div>
+
+            <button
+              onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
+              disabled={currentPage === totalPages}
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all ${currentPage === totalPages
+                ? 'bg-gray-50 text-gray-300 border-gray-200 cursor-not-allowed'
+                : 'bg-white text-gray-700 border-gray-200 hover:border-navy-dark hover:bg-gray-50'
+                }`}
+            >
+              <span className="hidden sm:inline">Next</span>
+              <ChevronRight size={18} />
+            </button>
+          </div>
+
+          <div className="text-gray-500 text-sm font-medium">
+            Page {currentPage} of {totalPages} — {totalArticles} articles total
+          </div>
         </div>
       </div>
     </section>

@@ -4,57 +4,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import WhatsAppIcon from '../components/WhatsAppIcon';
 
-const articles = [
-    {
-        id: 'cricket-jersey-design-tips',
-        title: 'Cricket Jersey Design Tips for Teams',
-        date: 'Feb 1, 2026',
-        image: 'https://images.pexels.com/photos/1367192/pexels-photo-1367192.jpeg?auto=compress&cs=tinysrgb&w=800',
-        content: `
-Designing a cricket jersey is about more than just looks – it's about team identity, comfort, and professional appearance. Here are some essential tips for creating the perfect design:
-
-1. **Choose the Right Fabric**: Performance is key. Look for moisture-wicking materials that keep players cool during intense matches.
-2. **Color Psychology**: Choose colors that represent your team's spirit. Bright colors like orange and yellow signify energy, while blues and greens are often seen as more professional and calm.
-3. **Logo Placement**: Ensure your team logo is prominently displayed on the chest. Sponsor logos should be clearly visible but not overshadow the team identity.
-4. **Modern Patterns**: Sublimation printing allows for complex gradients and patterns. Don't be afraid to experiment with geometric designs or subtle textures.
-5. **Typography**: Use bold, readable fonts for player names and numbers. Visibility from a distance is crucial.
-    `,
-        author: 'Design Team',
-        readTime: '5 min read'
-    },
-    {
-        id: 'choose-perfect-cricket-jersey-colors',
-        title: 'How to Choose Perfect Cricket Jersey Colors',
-        date: 'Jan 28, 2026',
-        image: 'https://images.pexels.com/photos/3803517/pexels-photo-3803517.jpeg?auto=compress&cs=tinysrgb&w=800',
-        content: `
-Color selection is one of the most important aspects of your team's branding. Your jersey colors will define how your team is perceived on and off the field.
-
-- **Primary Colors**: This should be your main brand color. It usually covers about 60-70% of the jersey.
-- **Secondary Colors**: Used for accents, sleeves, and side panels. These should complement your primary color.
-- **Contrast**: Ensure high contrast between the base color and the text (names/numbers).
-- **Tournament Rules**: Always check if there are specific color restrictions in the tournaments you play.
-    `,
-        author: 'Color Expert',
-        readTime: '4 min read'
-    },
-    {
-        id: 'maintaining-your-cricket-jerseys',
-        title: 'Maintaining Your Cricket Jerseys',
-        date: 'Jan 20, 2026',
-        image: 'https://images.pexels.com/photos/4239031/pexels-photo-4239031.jpeg?auto=compress&cs=tinysrgb&w=800',
-        content: `
-Premium cricket jerseys are an investment. Proper care ensures they last many seasons and continue to look vibrant.
-
-1. **Washing**: Always wash inside out in cold water. Avoid harsh detergents or bleach.
-2. **Drying**: Air dry only. High heat from dryers can damage the sublimation fibers and cause logos to peel if they are heat-pressed.
-3. **Storage**: Fold neatly or hang in a cool, dry place. Avoid direct sunlight for long periods as it can fade even high-quality prints over years.
-4. **Stain Removal**: Treat grass or dirt stains immediately with mild stain removers before washing.
-    `,
-        author: 'Maintenance Pro',
-        readTime: '3 min read'
-    }
-];
+import { articles } from '../data/blogs';
 
 const BlogPage = () => {
     const { id } = useParams();

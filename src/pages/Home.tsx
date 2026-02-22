@@ -9,6 +9,7 @@ import ShopByCategory from '../components/ShopByCategory';
 import Infrastructure from '../components/Infrastructure';
 import Blog from '../components/Blog';
 import About from '../components/About';
+import Testimonials from '../components/Testimonials';
 import ClubCollections from '../components/ClubCollections';
 import EnquirySection from '../components/EnquirySection';
 
@@ -36,6 +37,7 @@ const Home = () => {
       <Infrastructure />
       <Blog />
       <About />
+
       {/* Contact Section */}
       <section id="contact" className="py-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
@@ -79,6 +81,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <Testimonials />
     </main>
   );
 };
