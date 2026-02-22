@@ -8,14 +8,14 @@ const ClubCollections = () => {
     const [canScrollRight, setCanScrollRight] = useState(true);
 
     const clubs = [
-        { name: 'CSK', logo: 'CSK.png' },
-        { name: 'RCB', logo: 'RCB.png' },
-        { name: 'SRH', logo: 'SRH.png' },
-        { name: 'RR', logo: 'RR.png' },
-        { name: 'MI', logo: 'MI.png' },
-        { name: 'K11P', logo: 'K11.png' },
-        { name: 'KKRL', logo: 'KKR.png' },
-        { name: 'DC', logo: 'DC.png' },
+        { name: 'AC MILAN', logo: '/Gallery/FB1.png' },
+        { name: 'BARCELONA', logo: '/Gallery/FB2.png' },
+        { name: 'ARSENAL', logo: '/Gallery/FB3.png' },
+        { name: 'ARGENTINA', logo: '/Gallery/FB4.png' },
+        { name: 'AL NASSR', logo: '/Gallery/FB5.png' },
+        { name: 'AJAX', logo: '/Gallery/FB6.png' },
+        { name: 'AL HILAL', logo: '/Gallery/FB8.png' },
+        { name: 'ALGERIA', logo: '/Gallery/FB9.png' },
     ];
 
     const checkScroll = () => {
@@ -44,7 +44,7 @@ const ClubCollections = () => {
                 <div className="flex justify-between items-end mb-8">
                     <div>
                         <h2 className="text-2xl md:text-3xl uppercase tracking-wide">
-                            <span className="text-gray-400 font-bold">CRICKET CLUB</span>{' '}
+                            <span className="text-gray-400 font-bold">FOOTBALL CLUB</span>{' '}
                             <span className="text-black font-bold">COLLECTIONS</span>
                         </h2>
                     </div>

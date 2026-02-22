@@ -9,7 +9,7 @@ const CricketJerseyBanner = () => {
           The user can replace this source with their specific image. */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src="7c.jpeg"
+                    src="BANNER.png"
                     alt="Cricket Jerseys"
                     className="w-full h-full object-cover opacity-60"
                 />
@@ -25,7 +25,7 @@ const CricketJerseyBanner = () => {
                     className="text-4xl md:text-7xl font-bold uppercase italic tracking-tighter text-white mb-2"
                     style={{ fontFamily: 'Oswald, sans-serif' }} // Assuming Oswald or similar condensed font for sports look
                 >
-                    Cricket Jerseys <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-red-600">- Own Your Game</span>
+                    FootBall Jerseys <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-red-600">- Own Your Game</span>
                 </motion.h2>
 
                 <motion.p

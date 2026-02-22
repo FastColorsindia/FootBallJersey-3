@@ -20,7 +20,7 @@ const WhatWeDo = () => {
           <div className="mt-8 grid gap-6">
             <div className="grid md:grid-cols-3 gap-6 items-center">
               <img
-                src="/5.png"
+                src="/Gallery1/JS34.jpg"
                 alt="Cricket jersey design left"
                 className="w-full h-60 object-cover rounded-lg hidden md:block"
               />
@@ -40,7 +40,7 @@ const WhatWeDo = () => {
 
             <div>
               <img
-                src="/2.png"
+                src="/Gallery1/JSMAIN-1.jpg"
                 alt="Premium cricket jersey fabric"
                 className="w-full h-70 md:h-64 object-cover rounded-lg"
               />

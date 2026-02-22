@@ -38,7 +38,7 @@ const Blog = () => {
             Blog
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Latest insights and tips on cricket jersey design and care
+            Latest insights and tips on FootBall jersey design and care
           </p>
         </div>
 

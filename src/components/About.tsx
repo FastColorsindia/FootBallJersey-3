@@ -15,19 +15,19 @@ const About = () => {
 
           <div>
             <h2 className="text-4xl sm:text-5xl font-bold text-navy-dark mb-6">
-              About Cricket Jersey Designs
+              About FootBall Jersey Designs
             </h2>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              We are a dedicated cricket jersey design and manufacturing company committed to delivering high-quality, professional custom jerseys for cricket teams at all levels. With over 8 years of specialized cricket apparel experience, we've equipped hundreds of teams across India.
+              We are a dedicated FootBall jersey design and manufacturing company committed to delivering high-quality, professional custom jerseys for FootBall teams at all levels. With over 8 years of specialized FootBall apparel experience, we've equipped hundreds of teams across India.
             </p>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Our commitment to excellence in cricket jersey design and production has made us the preferred choice for amateur leagues, school teams, and professional franchises. We use premium breathable materials and advanced sublimation technology to ensure every jersey is comfortable, durable, and looks professional on the field.
+              Our commitment to excellence in FootBall jersey design and production has made us the preferred choice for amateur leagues, school teams, and professional franchises. We use premium breathable materials and advanced sublimation technology to ensure every jersey is comfortable, durable, and looks professional on the field.
             </p>
 
             <div className="grid grid-cols-2 gap-8 mb-8">
               <div>
                 <div className="text-3xl font-bold text-purple-600 mb-2">100+</div>
-                <div className="text-gray-600">Cricket Designs</div>
+                <div className="text-gray-600">FootBall Designs</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-purple-600 mb-2">80+</div>

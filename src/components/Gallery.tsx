@@ -5,12 +5,12 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<{ image: string; title: string } | null>(null);
 
   const galleryItems = [
-    { id: 1, title: '#1', image: '/Gallery/CSK.webp' },
-    { id: 2, title: '#2', image: '/Gallery/DC.webp' },
-    { id: 3, title: '#3', image: '/Gallery/RCB.webp' },
-    { id: 4, title: '#4', image: '/Gallery/RR.webp' },
-    { id: 5, title: '#5', image: '/Gallery/JS1.jpg' },
-    { id: 6, title: '#6', image: '/Gallery/JS3.jpg' },
+    { id: 1, title: '#1', image: '/Gallery1/JS35.webp' },
+    { id: 2, title: '#2', image: '/Gallery1/JS36.webp' },
+    { id: 3, title: '#3', image: '/Gallery1/JS38.webp' },
+    { id: 4, title: '#4', image: '/Gallery1/JS39.webp' },
+    { id: 5, title: '#5', image: '/Gallery1/JS42.webp' },
+    { id: 6, title: '#6', image: '/Gallery1/JS44.webp' },
   ];
 
   const GridSection = ({ items }: { items: any[] }) => (

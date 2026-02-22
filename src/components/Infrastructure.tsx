@@ -32,7 +32,7 @@ const Infrastructure = () => {
             Sports Jersey Facility
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Equipped with advanced sublimation technology for premium cricket jerseys
+            Equipped with advanced sublimation technology for premium FootBall jerseys
           </p>
         </div>
 

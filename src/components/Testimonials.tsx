@@ -7,19 +7,19 @@ const testimonials = [
         id: 1,
         name: "RAJESH KUMAR",
         role: "Captain, City Strikers CC",
-        content: "The custom cricket jerseys we ordered are phenomenal. The sublimation quality is top-notch and the colors are incredibly vibrant. The fabric is breathable and perfect for long matches.",
+        content: "The custom Football jerseys we ordered are phenomenal. The sublimation quality is top-notch and the colors are incredibly vibrant. The fabric is breathable and perfect for long matches.",
         rating: 5,
         image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
-        category: "Cricket Jersey x 50"
+        category: "Football Jersey x 50"
     },
     {
         id: 2,
         name: "SURESH R.",
         role: "Sports Coordinator, Academy",
-        content: "Best jersey printing facility in Tiruppur. They handled our 200+ jersey order with ease and the turnaround time was amazing. The 3D design tool made visualization so simple.",
+        content: "Best jersey printing facility in Tiruppur. They handled our 200+Football jersey order with ease and the turnaround time was amazing. The 3D design tool made visualization so simple.",
         rating: 5,
         image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
-        category: "Club Collections x 200"
+        category: "Football Collections x 200"
     },
     {
         id: 3,
@@ -28,7 +28,7 @@ const testimonials = [
         content: "Our team looks professional on the field now. The fit is perfect and the material keeps the players cool. Excellent customer service and attention to detail!",
         rating: 5,
         image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
-        category: "Women's Cricket Kit x 30"
+        category: "Women's FootBall Kit x 30"
     }
 ];
 

@@ -13,14 +13,14 @@ export interface Article {
 export const articles: Article[] = [
     {
         id: 'cricket-jersey-design-tips',
-        title: 'Cricket Jersey Design Tips for Teams',
+        title: 'Football Jersey Design Tips for Teams',
         date: 'Feb 1, 2026',
-        excerpt: 'Essential tips for designing professional and eye-catching cricket jerseys for your team.',
+        excerpt: 'Essential tips for designing professional and eye-catching Football jerseys for your team.',
         image: 'https://images.pexels.com/photos/1367192/pexels-photo-1367192.jpeg?auto=compress&cs=tinysrgb&w=800',
         readTime: '5 min read',
         author: 'Design Team',
         content: `
-Designing a cricket jersey is about more than just looks – it's about team identity, comfort, and professional appearance. Here are some essential tips for creating the perfect design:
+Designing a Football jersey is about more than just looks – it's about team identity, comfort, and professional appearance. Here are some essential tips for creating the perfect design:
 
 1. **Choose the Right Fabric**: Performance is key. Look for moisture-wicking materials that keep players cool during intense matches.
 2. **Color Psychology**: Choose colors that represent your team's spirit. Bright colors like orange and yellow signify energy, while blues and greens are often seen as more professional and calm.
@@ -31,9 +31,9 @@ Designing a cricket jersey is about more than just looks – it's about team ide
     },
     {
         id: 'choose-perfect-cricket-jersey-colors',
-        title: 'How to Choose Perfect Cricket Jersey Colors',
+        title: 'How to Choose Perfect Football Jersey Colors',
         date: 'Jan 28, 2026',
-        excerpt: 'A guide to selecting colors and designs that represent your cricket team brand.',
+        excerpt: 'A guide to selecting colors and designs that represent your Football team brand.',
         image: 'https://images.pexels.com/photos/3803517/pexels-photo-3803517.jpeg?auto=compress&cs=tinysrgb&w=800',
         readTime: '4 min read',
         author: 'Color Expert',
@@ -48,9 +48,9 @@ Color selection is one of the most important aspects of your team's branding. Yo
     },
     {
         id: 'maintaining-your-cricket-jerseys',
-        title: 'Maintaining Your Cricket Jerseys',
+        title: 'Maintaining Your Football Jerseys',
         date: 'Jan 20, 2026',
-        excerpt: 'Best practices for maintaining and caring for premium cricket jerseys.',
+        excerpt: 'Best practices for maintaining and caring for premium Football jerseys.',
         image: 'https://images.pexels.com/photos/4239031/pexels-photo-4239031.jpeg?auto=compress&cs=tinysrgb&w=800',
         readTime: '3 min read',
         author: 'Maintenance Pro',
@@ -81,9 +81,9 @@ Screen printing involves pressing ink through a stencil onto the surface. It's g
     },
     {
         id: 'top-cricket-jersey-trends-2026',
-        title: 'Top Cricket Jersey Trends in 2026',
+        title: 'Top Football Jersey Trends in 2026',
         date: 'Jan 10, 2026',
-        excerpt: 'Discover the latest styles and innovations in cricket jersey designs this year.',
+        excerpt: 'Discover the latest styles and innovations in Football jersey designs this year.',
         image: 'https://images.pexels.com/photos/3628912/pexels-photo-3628912.jpeg?auto=compress&cs=tinysrgb&w=800',
         readTime: '5 min read',
         author: 'Trend Analyst',

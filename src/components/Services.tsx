@@ -4,13 +4,13 @@ const Services = () => {
   const services = [
     {
       icon: Shirt,
-      title: 'Custom Cricket Jerseys',
-      description: 'High-quality custom cricket jerseys with vibrant full-color sublimation printing and personalized designs.'
+      title: 'Custom FootBall Jerseys',
+      description: 'High-quality custom FootBall jerseys with vibrant full-color sublimation printing and personalized designs.'
     },
     {
       icon: Palette,
       title: 'Design Customization',
-      description: 'Complete design service with team logos, player names, and numbers tailored to your cricket team.'
+      description: 'Complete design service with team logos, player names, and numbers tailored to your FootBall team.'
     },
     {
       icon: Zap,
@@ -20,17 +20,17 @@ const Services = () => {
     {
       icon: Users,
       title: 'Team Orders',
-      description: 'Special pricing and dedicated support for cricket teams of all sizes and levels.'
+      description: 'Special pricing and dedicated support for FootBall teams of all sizes and levels.'
     },
     {
       icon: Award,
       title: 'Premium Materials',
-      description: 'Only the finest breathable fabrics designed for comfort and performance on the cricket field.'
+      description: 'Only the finest breathable fabrics designed for comfort and performance on the FootBall field.'
     },
     {
       icon: Truck,
       title: 'Pan-India Delivery',
-      description: 'Reliable shipping to cricket clubs and teams across India with tracking and support.'
+      description: 'Reliable shipping to FootBall clubs and teams across India with tracking and support.'
     }
   ];
 

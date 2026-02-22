@@ -21,7 +21,7 @@ const Footer = () => {
               <span className="text-white font-bold text-lg">FastColors</span>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Premium sublimation printing for custom jerseys and apparel. Quality, speed, and excellence in every print.
+              Premium sublimation printing for custom FootBall jerseys and apparel. Quality, speed, and excellence in every print.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social, index) => {

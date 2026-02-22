@@ -4,25 +4,25 @@ import { motion } from 'framer-motion';
 
 
 const row1Images = [
-    'CSK.png ',
-    'MI.png', // Replaced broken image
-    'RR.png',
-    'SRH.png',
-    'KKR.png',
-    'DC.png',
-    'RCB.png',
-    'DC.png',
+    '/Gallery/FB1.png',
+    '/Gallery/FB2.png', // Replaced broken image
+    '/Gallery/FB3.png',
+    '/Gallery/FB4.png',
+    '/Gallery/FB5.png',
+    '/Gallery/FB6.png',
+    '/Gallery/FB7.png',
+    '/Gallery/FB8.png',
 ];
 
 const row2Images = [
-    '/Gallery/JS1.jpg',
-    '/Gallery/JS11.jpg',
-    '/Gallery/RCB.webp',
-    '/Gallery/RR.webp',
-    '/Gallery/CSK.webp',
-    '/Gallery/DC.webp',
-    '/Gallery/RCB.webp',
-    '/Gallery/JS12.jpg',
+    '/Gallery1/JS35.webp',
+    '/Gallery1/JS32.webp',
+    '/Gallery1/JS38.webp',
+    '/Gallery1/JS36.webp',
+    '/Gallery1/JS42.webp',
+    '/Gallery1/JS43.webp',
+    '/Gallery1/JS44.webp',
+    '/Gallery1/JS45.webp',
 ];
 
 // Duplicate items multiple times to ensure we fill the screen for smooth loop
