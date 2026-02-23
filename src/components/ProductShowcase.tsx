@@ -97,7 +97,7 @@ export const ProductShowcase = () => {
             {/* 3. CTA Button */}
             <div className="max-w-7xl mx-auto px-4 flex justify-center">
                 <motion.a
-                    href="https://wa.me/917812865788?text=Hi%2C%20I'd%20like%20to%20place%20an%20order%20or%20explore%20your%20design%20catalog."
+                    href="https://wa.me/917812865788?text=Welcome%20to%20Fast%20Colors%20Fashion!%20Football%20Order%20Enquiry"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}

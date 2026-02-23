@@ -44,7 +44,7 @@ const About = () => {
             </div>
 
             <a
-              href="https://wa.me/917812865788"
+              href="https://wa.me/917812865788?text=Welcome%20to%20Fast%20Colors%20Fashion!%20Football%20Order%20Enquiry"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-8 py-3 bg-purple-600 text-white font-bold rounded-lg hover:bg-purple-700 transition-colors duration-300"

@@ -58,18 +58,18 @@ const Hero = () => {
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-end md:items-center h-full pb-12 md:pb-0">
           <div className="w-full md:w-1/2 text-white p-4 md:p-0 text-center md:text-left">
             <h3 className="text-xl md:text-2xl font-medium mb-2 opacity-90 drop-shadow-md">
-              The #1 Industrial-Grade <br /> Sublimation Systems
+              India  #1 Industrial-Grade <br />FootBall Sublimation Manufacturers
             </h3>
             <h1 className="text-4xl md:text-7xl font-bold mb-6 md:mb-8 leading-tight drop-shadow-lg">
               Trusted By <br /> Entrepreneurs
             </h1>
             <a
-              href="https://wa.me/917812865788?text=Hi%2C%20I'm%20interested%20in%20your%20industrial-grade%20sublimation%20systems."
+              href="https://wa.me/917812865788?text=Welcome%20to%20Fast%20Colors%20Fashion!%20Football%20Order%20Enquiry"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-white hover:bg-gray-100 text-blue-900 text-lg font-semibold py-3 md:py-4 px-8 md:px-10 rounded-md transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
             >
-              CONTECT US
+              CONTACT US
             </a>
           </div>
         </div>
@@ -136,7 +136,7 @@ const Hero = () => {
                     </p>
 
                     <a
-                      href="https://wa.me/917812865788?text=Hi%2C%20I'd%20like%20to%20design%20a%20jersey%20for%20my%20team."
+                      href="https://wa.me/917812865788?text=Welcome%20to%20Fast%20Colors%20Fashion!%20Football%20Order%20Enquiry"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-6 md:py-3 md:px-8 rounded-full w-fit transition-all text-xs md:text-sm uppercase tracking-wider shadow-lg inline-block"

@@ -2,7 +2,8 @@ import { MessageCircle } from 'lucide-react';
 
 const WhatsAppIcon = () => {
   const whatsappNumber = '917812865788';
-  const whatsappURL = `https://wa.me/${whatsappNumber}`;
+  const message = encodeURIComponent('Welcome to Fast Colors Fashion! Football Order Enquiry');
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
 
   return (
     <a

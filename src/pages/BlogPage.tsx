@@ -97,7 +97,7 @@ const BlogPage = () => {
                                 <div className="flex gap-2">
                                     <span className="text-sm text-gray-400 italic">Interested in custom designs?</span>
                                     <a
-                                        href="https://wa.me/917812865788?text=Hi%2C%20I'm%20interested%20in%20custom%20jersey%20designs."
+                                        href="https://wa.me/917812865788?text=Welcome%20to%20Fast%20Colors%20Fashion!%20Football%20Order%20Enquiry"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-sm font-bold text-green-600 hover:text-green-700"
