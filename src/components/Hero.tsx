@@ -58,7 +58,7 @@ const Hero = () => {
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-end md:items-center h-full pb-12 md:pb-0">
           <div className="w-full md:w-1/2 text-white p-4 md:p-0 text-center md:text-left">
             <h3 className="text-xl md:text-2xl font-medium mb-2 opacity-90 drop-shadow-md">
-              India  #1 Industrial-Grade <br />FootBall Sublimation Manufacturers
+              India  #1 <br />FootBall Sublimation Jersey Manufacturers
             </h3>
             <h1 className="text-4xl md:text-7xl font-bold mb-6 md:mb-8 leading-tight drop-shadow-lg">
               Trusted By <br /> Entrepreneurs

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<{ image: string; title: string } | null>(null);
@@ -43,12 +44,12 @@ const Gallery = () => {
         ))}
       </div>
       <div className="flex justify-center mt-12">
-        <a
-          href="/gallery"
+        <Link
+          to="/gallery"
           className="inline-flex items-center px-8 py-3 bg-red-500 hover:bg-red-600 text-white rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-red-200"
         >
           View More <span className="ml-2">→</span>
-        </a>
+        </Link>
       </div>
     </div>
   );

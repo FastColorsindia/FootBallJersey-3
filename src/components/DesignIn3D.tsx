@@ -1,6 +1,32 @@
 import { motion } from 'framer-motion';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const DesignIn3D = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleLearnMore = () => {
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById('enquiry');
+        if (element) {
+          const navHeight = 80;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+          window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById('enquiry');
+      if (element) {
+        const navHeight = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      }
+    }
+  };
   return (
     <section id="design3d" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,9 +50,12 @@ const DesignIn3D = () => {
               <li>• Order directly once your design is finalized</li>
             </ul>
 
-            <a href="#" className="inline-block px-6 py-3 bg-purple-700 text-white rounded-lg font-semibold shadow hover:bg-purple-800 transition">
-              Learn More
-            </a>
+            <button
+              onClick={handleLearnMore}
+              className="inline-block px-6 py-3 bg-purple-700 text-white rounded-lg font-semibold shadow hover:bg-purple-800 transition"
+            >
+              Order Now
+            </button>
           </motion.div>
 
           <motion.div
@@ -43,7 +72,7 @@ const DesignIn3D = () => {
                 className="w-full h-50% object-cover"
               />
             </div>
-            
+
           </motion.div>
         </div>
       </div>

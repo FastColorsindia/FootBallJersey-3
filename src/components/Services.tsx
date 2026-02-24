@@ -1,6 +1,32 @@
 import { Shirt, Palette, Zap, Award, Users, Truck } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Services = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleLearnMore = () => {
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById('enquiry');
+        if (element) {
+          const navHeight = 80;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+          window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById('enquiry');
+      if (element) {
+        const navHeight = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      }
+    }
+  };
   const services = [
     {
       icon: Shirt,
@@ -65,7 +91,10 @@ const Services = () => {
                   {service.description}
                 </p>
 
-                <div className="mt-6 flex items-center text-[#BD22B8] font-semibold group-hover:gap-2 transition-all">
+                <div
+                  onClick={handleLearnMore}
+                  className="mt-6 flex items-center text-[#BD22B8] font-semibold group-hover:gap-2 transition-all cursor-pointer"
+                >
                   Learn More
                   <svg className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
