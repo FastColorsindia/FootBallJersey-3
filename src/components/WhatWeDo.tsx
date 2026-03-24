@@ -46,19 +46,19 @@ const WhatWeDo = () => {
         <div className="mt-8 grid gap-6">
           <div className="grid md:grid-cols-3 gap-6 items-center">
             <img
-              src="/Gallery1/1.jpeg"
+              src="/Gallery1/11.jpeg"
               alt="FootBall jersey design left"
               className="w-full h-60 object-cover rounded-lg hidden md:block"
             />
 
             <img
-              src="/Gallery1/3.jpeg"
+              src="/Gallery1/13.jpeg"
               alt="Jersey production facility"
               className="w-full h-60 object-cover rounded-lg"
             />
 
             <img
-              src="/Gallery1/2.jpeg"
+              src="/Gallery1/12.jpeg"
               alt="FootBall jersey design right"
               className="w-full h-60 object-cover rounded-lg hidden md:block"
             />
@@ -66,7 +66,7 @@ const WhatWeDo = () => {
 
           <div>
             <img
-              src="/Gallery1/MAIN.jpeg"
+              src="/Gallery1/main.jpeg"
               alt="Premium FootBall jersey fabric"
               className="w-full h-70 md:h-64 object-cover rounded-lg"
             />
