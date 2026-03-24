@@ -67,7 +67,7 @@ const DesignIn3D = () => {
           >
             <div className="bg-gray-50 rounded-xl overflow-hidden shadow-lg">
               <img
-                src="/22.jpeg"
+                src="/2.jpeg"
                 alt="3D customizer preview"
                 className="w-full h-50% object-cover"
               />
