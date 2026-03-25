@@ -37,16 +37,16 @@ const DesignIn3D = () => {
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Design Your FootBall Jersey - In 3D In Real Time</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Design Your Football Jersey - In 3D In Real Time</h2>
             <p className="text-gray-700 mb-6">
-              Choose your FootBall jersey style, customize colors, add your team logo, player names and numbers - all in 3D and in real time.
+              Choose your Football jersey style, customize colors, add your team logo, player names and numbers - all in 3D and in real time.
               Preview your final design, share it with your team, and order when you're ready. Simple, fast and completely customizable.
             </p>
 
             <ul className="space-y-3 text-gray-700 mb-6">
-              <li>• Real-time 3D preview of your FootBall jersey design</li>
+              <li>• Real-time 3D preview of your Football jersey design</li>
               <li>• Change colors, add team logos and edit player details instantly</li>
-              <li>• Save designs and share with your entire FootBall team</li>
+              <li>• Save designs and share with your entire Football team</li>
               <li>• Order directly once your design is finalized</li>
             </ul>
 
